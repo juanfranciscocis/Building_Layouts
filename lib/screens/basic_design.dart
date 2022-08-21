@@ -11,13 +11,16 @@ class BasicDesignScreen extends StatelessWidget{
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
-        children:  [
+        children:   [
           Image(image: AssetImage('assets/landscape.jpg')), //Image widget
           TitleWidget(), //TitleWidget widget
+          BottonSectionWidget()
 
         ],
       ),
     );
   }
 }
+
+
 

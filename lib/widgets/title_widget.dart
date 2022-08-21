@@ -13,7 +13,7 @@ class TitleWidget extends StatelessWidget {
         borderRadius: BorderRadius.circular(10),
       ),
       elevation: 10,
-      margin: EdgeInsets.all(30),
+      margin: EdgeInsets.only(left: 20, right: 20, top: 20),
       child: Container(
         margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
         child: Row(
@@ -22,7 +22,7 @@ class TitleWidget extends StatelessWidget {
 
             Column(
               crossAxisAlignment: CrossAxisAlignment.start, //aligns the text to the left
-              children: [
+              children: const [
                 Text('Hello World',
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
@@ -38,8 +38,8 @@ class TitleWidget extends StatelessWidget {
 
             Expanded(child: Container()), //spaces the image to the right
 
-            Icon(Icons.star, color: Colors.redAccent,),
-            Text('41')
+            const Icon(Icons.star, color: Colors.redAccent,),
+            const Text('41')
 
           ],
         ),
