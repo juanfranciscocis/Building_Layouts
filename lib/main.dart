@@ -1,5 +1,9 @@
-import 'package:building_layouts/widgets/widgets.dart';
+
 import 'package:flutter/material.dart';
+
+import 'package:building_layouts/screens/screens.dart';
+import 'package:building_layouts/widgets/widgets.dart';
+
 
 void main(){
   runApp(const MyApp());
@@ -15,7 +19,14 @@ class MyApp extends StatelessWidget{
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Material App',
-      home: TempHomeScreen()
+      initialRoute: 'basic_design',
+
+      routes: {
+        'basic_design': (context) => const BasicDesignScreen(),
+      },
+
+
+
     );
   }
 
