@@ -1,3 +1,4 @@
+import 'package:building_layouts/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
 void main(){
@@ -14,14 +15,7 @@ class MyApp extends StatelessWidget{
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Material App',
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Material App Bar'),
-        ),
-        body: const Center(
-          child: Text('Hello World'),
-        ),
-      ),
+      home: TempHomeScreen()
     );
   }
 
@@ -29,3 +23,4 @@ class MyApp extends StatelessWidget{
 
 
 }
+
