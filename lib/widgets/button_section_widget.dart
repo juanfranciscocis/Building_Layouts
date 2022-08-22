@@ -14,47 +14,42 @@ class BottonSectionWidget extends StatelessWidget {
         borderRadius: BorderRadius.circular(10),
       ),
       elevation: 10,
-      margin: EdgeInsets.all(20),
+      margin: const EdgeInsets.all(20),
       child: Container(
-        padding: EdgeInsets.all(20),
+        padding: const EdgeInsets.all(20),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
+          children: const [
 
-            Column(
-              children:[
-                Icon(Icons.phone, color: Colors.indigoAccent),
-                //ADD SPACE BETWEEN ICON AND TEXT
-                SizedBox(height: 5),
-                Text('CALL'),
-              ]
-            ),
-
-            Column(
-                children:[
-                  Icon(Icons.location_on, color: Colors.indigoAccent),
-                  //ADD SPACE BETWEEN ICON AND TEXT
-                  SizedBox(height: 5),
-                  Text('ROUTE'),
-                ]
-            ),
-
-            Column(
-                children:[
-                  Icon(Icons.share, color: Colors.indigoAccent),
-                  //ADD SPACE BETWEEN ICON AND TEXT
-                  SizedBox(height: 5),
-                  Text('SHARE'),
-                ]
-            )
-
-
-
-
+            CustomButton(icon: Icons.call, text: 'CALL'),
+            CustomButton(icon: Icons.near_me, text: 'ROUTE'),
+            CustomButton(icon: Icons.share, text: 'SHARE'),
 
 
         ],),
       ),
+    );
+  }
+}
+
+class CustomButton extends StatelessWidget {
+
+  final IconData icon;
+  final String text;
+
+  const CustomButton({
+    Key? key, required this.icon, required this.text,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Icon(this.icon, color: Colors.indigoAccent),
+        //ADD SPACE BETWEEN ICON AND TEXT
+        const SizedBox(height: 5),
+        Text(text),
+      ]
     );
   }
 }
